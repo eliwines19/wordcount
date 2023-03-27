@@ -8,7 +8,14 @@
 </head>
 <body>
 
-    <h1>{{ title }}</h1>
-    
+    <h1>Word Count</h1>
+
+    <form action="{% url 'count' %}">
+        <label for="">Enter some text</label>
+        <br>
+        <textarea name="fulltext" id="" cols="40" rows="5"></textarea>
+        <br>
+        <input type="submit" value="Count!">
+    </form>
 </body>
 </html>
