@@ -10,9 +10,24 @@
 
     <h1>There are {{ count }} words in your text!</h1>
 
+    <a href="{% url 'home' %}">Start Over</a>
+
     <h2>Your text:</h2>
     
-    <h3>{{ fulltext }}</h3>
+    <h4>{{ fulltext }}</h4>
+
+    <h2>Word that appeared the most:</h2>
+
+    <h4>{{ highest_word }}</h4>
+
+    <h2>Number of occurrences for each word:</h2>
+
+    {% for word, i in wordcount %}
+
+    <span>{{ word }}: {{ i }}</span>
+    <br>
+
+    {% endfor %}
 
 </body>
 </html>
